@@ -3,10 +3,10 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebApplication","name":"TaskFlow Kanban","description":"Papan Kanban premium","url":"https://todo-kanban-one.vercel.app","applicationCategory":"ProductivityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"}};
+const __jsonld = {"@context":"https://schema.org","@type":"WebApplication","name":"TaskFlow Kanban","description":"Papan Kanban premium","url":"https://kanban-board.pintuweb.com","applicationCategory":"ProductivityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"}};
 
 export const metadata = {
-  metadataBase: new URL("https://todo-kanban-one.vercel.app"),
+  metadataBase: new URL("https://kanban-board.pintuweb.com"),
   title: "TaskFlow — Papan Kanban Produktif",
   description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
   applicationName: "TaskFlow",
@@ -14,11 +14,11 @@ export const metadata = {
   authors: [{ name: "TaskFlow" }],
   creator: "TaskFlow",
   publisher: "TaskFlow",
-  alternates: { canonical: "https://todo-kanban-one.vercel.app" },
+  alternates: { canonical: "https://kanban-board.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://todo-kanban-one.vercel.app",
+    url: "https://kanban-board.pintuweb.com",
     siteName: "TaskFlow",
     title: "TaskFlow — Papan Kanban Produktif",
     description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
