@@ -3,9 +3,38 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 
+const __jsonld = {"@context":"https://schema.org","@type":"WebApplication","name":"TaskFlow Kanban","description":"Papan Kanban premium","url":"https://todo-kanban-one.vercel.app","applicationCategory":"ProductivityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"}};
+
 export const metadata = {
-  title: "TaskFlow — Papan Kanban",
-  description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dark mode.",
+  metadataBase: new URL("https://todo-kanban-one.vercel.app"),
+  title: "TaskFlow — Papan Kanban Produktif",
+  description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
+  applicationName: "TaskFlow",
+  keywords: ["kanban", "papan kanban", "manajemen tugas", "produktivitas", "project board"],
+  authors: [{ name: "TaskFlow" }],
+  creator: "TaskFlow",
+  publisher: "TaskFlow",
+  alternates: { canonical: "https://todo-kanban-one.vercel.app" },
+  openGraph: {
+    type: "website",
+    locale: "id_ID",
+    url: "https://todo-kanban-one.vercel.app",
+    siteName: "TaskFlow",
+    title: "TaskFlow — Papan Kanban Produktif",
+    description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "TaskFlow — Papan Kanban Produktif" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "TaskFlow — Papan Kanban Produktif",
+    description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
+    images: ["/og.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
+  },
 };
 
 export const viewport = { themeColor: "#4f46e5" };
@@ -20,7 +49,8 @@ export default function RootLayout({ children }) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">{children}<script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(__jsonld) }} />
+        </body>
     </html>
   );
 }
