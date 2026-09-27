@@ -1,4 +1,10 @@
-# Kanban Board
+# TaskFlow — Papan Kanban
+
+**Demo live:** https://todo-kanban-one.vercel.app
+
+![Tangkapan layar](public/og.jpg)
+
+> Data tersimpan di browser (localStorage), tanpa backend.
 
 Papan Kanban dengan **drag & drop** antar kolom (To Do → In Progress → Done). Varian "interaksi & UX kompleks" dari portfolio.
 
@@ -23,3 +29,7 @@ Next.js 15 · React 19 · Tailwind v4 · @dnd-kit/core · @dnd-kit/sortable · l
 npm install
 npm run dev
 ```
+
+---
+
+Bagian dari koleksi 3 aplikasi to-do di [PortalTodo](https://portal-todo.vercel.app). Dibuat oleh [PintuWeb](https://pintuweb.com), jasa pembuatan website.
