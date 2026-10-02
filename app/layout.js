@@ -1,33 +1,33 @@
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"], variable: "--font-jakarta", display: "swap" });
 
-const __jsonld = {"@context":"https://schema.org","@type":"WebApplication","name":"TaskFlow Kanban","description":"Papan Kanban premium","url":"https://todo-kanban-one.vercel.app","applicationCategory":"ProductivityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"}};
+const __jsonld = {"@context":"https://schema.org","@type":"WebApplication","name":"Lajur Kanban","description":"Papan kanban tiga lajur: seret kartu, checklist dan tenggat di tiap kartu, batas kerja paralel, arsip, serta statistik lead time dan cycle time.","url":"https://todo-kanban-one.vercel.app","applicationCategory":"ProductivityApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"IDR"}};
 
 export const metadata = {
   metadataBase: new URL("https://todo-kanban-one.vercel.app"),
-  title: "TaskFlow — Papan Kanban Produktif",
-  description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
-  applicationName: "TaskFlow",
+  title: { default: "Lajur — Papan kanban dengan batas WIP", template: "%s — Lajur" },
+  description: "Papan kanban tiga lajur: seret kartu, checklist dan tenggat di tiap kartu, batas kerja paralel, arsip, serta statistik lead time dan cycle time.",
+  applicationName: "Lajur",
   keywords: ["kanban", "papan kanban", "manajemen tugas", "produktivitas", "project board"],
-  authors: [{ name: "TaskFlow" }],
-  creator: "TaskFlow",
-  publisher: "TaskFlow",
+  authors: [{ name: "Lajur" }],
+  creator: "Lajur",
+  publisher: "Lajur",
   alternates: { canonical: "https://todo-kanban-one.vercel.app" },
   openGraph: {
     type: "website",
     locale: "id_ID",
     url: "https://todo-kanban-one.vercel.app",
-    siteName: "TaskFlow",
-    title: "TaskFlow — Papan Kanban Produktif",
-    description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
-    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "TaskFlow — Papan Kanban Produktif" }],
+    siteName: "Lajur",
+    title: "Lajur — Papan kanban dengan batas WIP",
+    description: "Papan kanban tiga lajur: seret kartu, checklist dan tenggat di tiap kartu, batas kerja paralel, arsip, serta statistik lead time dan cycle time.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Lajur — Papan kanban dengan batas WIP" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "TaskFlow — Papan Kanban Produktif",
-    description: "Papan Kanban premium: drag & drop antar kolom, prioritas, tenggat, progress, dan dark mode.",
+    title: "Lajur — Papan kanban dengan batas WIP",
+    description: "Papan kanban tiga lajur: seret kartu, checklist dan tenggat di tiap kartu, batas kerja paralel, arsip, serta statistik lead time dan cycle time.",
     images: ["/og.jpg"],
   },
   robots: {
@@ -37,15 +37,15 @@ export const metadata = {
   },
 };
 
-export const viewport = { themeColor: "#4f46e5" };
+export const viewport = { themeColor: "#0f766e" };
 
 const themeScript = `
-(function(){try{var t=localStorage.getItem('taskflow.theme');var d=t? t==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();
+(function(){try{var t=localStorage.getItem('lajur.tema');var d=t? t==='dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();
 `;
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="id" className={inter.variable} suppressHydrationWarning>
+    <html lang="id" className={jakarta.variable} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>

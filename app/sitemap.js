@@ -1,5 +1,6 @@
+const URL = 'https://todo-kanban-one.vercel.app';
+
 export default function sitemap() {
-  return [
-    { url: "https://todo-kanban-one.vercel.app", lastModified: new Date(), changeFrequency: "monthly", priority: 1 },
-  ];
+  const now = new Date();
+  return ['', '/statistik', '/arsip'].map((p) => ({ url: URL + p, lastModified: now, changeFrequency: 'monthly', priority: p ? 0.6 : 1 }));
 }
