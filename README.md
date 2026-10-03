@@ -41,4 +41,4 @@ Buka http://localhost:3000. Untuk build produksi: `npm run build` lalu `npm star
 
 ---
 
-Bagian dari koleksi 3 aplikasi daftar tugas di [PortalTodo](https://portal-todo.vercel.app). Dibuat oleh [PintuWeb](https://pintuweb.com), jasa pembuatan website.
+Bagian dari koleksi 3 aplikasi daftar tugas di [PortalTodo](https://www.pintuweb.com/aplikasi-to-do). Dibuat oleh [PintuWeb](https://www.pintuweb.com), jasa pembuatan website.
